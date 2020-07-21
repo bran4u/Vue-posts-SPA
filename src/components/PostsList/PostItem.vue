@@ -18,3 +18,14 @@ export default {
   padding: 30px;
 } 
 </style>
+
+<style>
+.post__item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+
+</style>

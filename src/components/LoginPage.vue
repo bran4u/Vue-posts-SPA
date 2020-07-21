@@ -4,7 +4,7 @@
     <form class="login__form" @submit.prevent="login">
       <input required v-model="inputEmail" type="email" placeholder="Email"/>
       <span v-if="error"> Wrong Email </span>
-      <button type="submit">Login</button>
+      <button class="login__button" type="submit">Login</button>
     </form>
   </div>
 </template>
@@ -27,13 +27,7 @@ export default {
     login() {
 
       this.userCheck(this.inputEmail);
-
-        if (!this.getUserValidation) {
-          this.error = true;
-        } else {
-          this.login(this.inputEmail);
-          this.$router.push('./home');
-        }
+        this.$router.push('./home');
 
     },
   },
@@ -47,7 +41,30 @@ export default {
 </script>>
 
 <style scoped>
+.login {
+  display: flex;
+  justify-content: center;
+}
+
 .login__form {
-  margin: 10px;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+.login__button {
+  height: 40px;
+  color: white;
+  margin-top: 20px;
+  background-color: #409eff;
+  border: 1px solid #409eff;
+  transition: background-color 0.5s;
+}
+
+.login__button:hover {
+  background-color: white;
+  color: #409eff;
 }
 </style>

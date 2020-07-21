@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="posts">
     <ul class="post__list">
-      <PostItem 
+      <PostItem
         v-for="post of posts"
         v-bind:post="post"
         v-bind:key="post.id"
@@ -19,3 +19,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.posts {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post__list {
+  list-style: none;
+}
+</style>

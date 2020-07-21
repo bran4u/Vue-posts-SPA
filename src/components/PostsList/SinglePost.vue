@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.body }}</p>
+  <div class="singlePost">
+    <div class="singlePost__item">
+      <h1 class="singlePost__title">{{ post.title }}</h1>
+      <p class="singlePost__body">{{ post.body }}</p>
+    </div>
         <CommentsLists 
         v-bind:comments="comments"
         />
@@ -34,3 +36,19 @@ export default {
   },
 }
 </script>
+
+
+<style scoped>
+.singlePost {
+  display: flex;
+}
+
+.singlePost__item {
+  max-height: 200px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+</style>
