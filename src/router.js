@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import LoginPage from './components/LoginPage';
+import App from './App';
 
 Vue.use(Router)
 
@@ -9,22 +9,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: LoginPage,
+      component: App,
     },
     {
-      path: '/home',
+      path: '/Vue-posts-SPA/home',
       component: () => import('./components/HomePage.vue')
     },
     {
-      path: '/user',
+      path: '/Vue-posts-SPA/user',
       component: () => import('./components/UserPage.vue')
     },
     {
-      path:'/post/:id',
+      path:'/Vue-posts-SPA/post/:id',
       component: () => import('./components/PostsList/SinglePost.vue') 
     },
     {
-      path: '/user/:id',
+      path: '/Vue-posts-SPA/user/:id',
       component: () => import('./components/UserPage.vue')
     },
   ]

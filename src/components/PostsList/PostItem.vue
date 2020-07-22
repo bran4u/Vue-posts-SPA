@@ -1,8 +1,8 @@
 <template>
   <li class="post__item">
-    <router-link class="router__link" :to="`/post/${post.id}`">{{ post.title }}</router-link>
+    <router-link class="router__link" :to="`/Vue-posts-SPA/post/${post.id}`">{{ post.title }}</router-link>
     <p>{{ post.body }}</p>
-    <router-link class="router__link" :to="`/user/${post.user.id}`">{{ post.user.name }}</router-link>
+    <router-link class="router__link" :to="`/Vue-posts-SPA/user/${post.user.id}`">{{ post.user.name }}</router-link>
   </li>
 </template>
 

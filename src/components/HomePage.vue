@@ -31,7 +31,7 @@ export default {
   async mounted() {
     this.getPostFromApi();
     this.getCommentsFromApi();
-    this.getPostWithUsers()
+    this.getPostWithUsers();
   },
   components: {
     PostList,

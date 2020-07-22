@@ -23,6 +23,9 @@ export default {
     },
     userCheck(state, inputEmail) {
       state.userValidation = state.users.some(user => user.email === inputEmail);
+    },
+    logoutValidation(state) {
+      state.userValidation = false;
     }
   },
   state: {

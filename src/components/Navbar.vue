@@ -2,20 +2,20 @@
   <nav>
     <ul class="navbar__list">
       <li class="navbar__item">
-        <router-link class="navbar__link" to="/home">Posts</router-link>
+        <router-link class="navbar__link" to="/Vue-posts-SPA/home">Posts</router-link>
       </li>
       <li class="navbar__item">
-        <router-link class="navbar__link" :to="`/user/${id}`">User</router-link>
+        <router-link class="navbar__link" :to="`/Vue-posts-SPA/user/${id}`">User</router-link>
       </li>
       <li class="navbar__item">
-        <router-link class="navbar__link" to="/">Logout</router-link>
+        <router-link @click.native="logautHandler" class="navbar__link" to="/Vue-posts-SPA/">Logout</router-link>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   data() {
     return {
@@ -24,6 +24,12 @@ export default {
   },
   computed: {
     ...mapGetters(['getLoggedId']),
+  },
+  methods: {
+    ...mapMutations(['logoutValidation']),
+    logautHandler() {
+      this.logoutValidation();
+    }
   },
   created() {
     this.id = this.getLoggedId;
