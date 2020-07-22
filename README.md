@@ -1,24 +1,5 @@
-# vue-template
+# Vue-posts-SPA
 
-## Project setup
-```
-npm install
-```
+Used Vue.js, vuex, vue-router, axios.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Published on gh-pages [LINK](https://bran4u.github.io/Vue-posts-SPA/)
