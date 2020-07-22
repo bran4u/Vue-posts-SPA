@@ -15,10 +15,7 @@ export default {
     setUsers (state, users) {
       state.users = users
     },
-    loginUser(state, loggedUser) {
-      state.loggedUser = loggedUser;
-    },
-    login(state, inputEmail) {
+    loginUser(state, inputEmail) {
       state.userId = state.users.find(user => user.email === inputEmail).id;
     },
     userCheck(state, inputEmail) {
@@ -26,12 +23,12 @@ export default {
     },
     logoutValidation(state) {
       state.userValidation = false;
-    }
+    },
   },
   state: {
     users: [],
-    userId: 1,
-    userValidation: true,
+    userId: 0,
+    userValidation: false,
   },
   getters: {
     getUsers(state) {

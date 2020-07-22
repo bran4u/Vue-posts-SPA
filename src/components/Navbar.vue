@@ -8,7 +8,7 @@
         <router-link class="navbar__link" :to="`/Vue-posts-SPA/user/${id}`">User</router-link>
       </li>
       <li class="navbar__item">
-        <router-link @click.native="logautHandler" class="navbar__link" to="/Vue-posts-SPA/">Logout</router-link>
+        <router-link @click.native="logoutHandler" class="navbar__link" to="/Vue-posts-SPA/">Logout</router-link>
       </li>
     </ul>
   </nav>
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     ...mapMutations(['logoutValidation']),
-    logautHandler() {
+    logoutHandler() {
       this.logoutValidation();
     }
   },

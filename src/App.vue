@@ -23,7 +23,7 @@ export default {
     return {
       inputEmail: '',
       error: false,
-      userValidation: false,
+      userValidation: true,
     }
   },
   components: {
@@ -34,10 +34,11 @@ export default {
   },
   methods: {
     ...mapActions(['getUsersFromApi', 'getCommentsFromApi', 'getPostsFromApi']),
-    ...mapMutations(['login', 'userCheck']),
+    ...mapMutations(['loginUser', 'userCheck']),
     login() {
       this.userCheck(this.inputEmail);
       if (this.getUserValidation) {
+        this.loginUser(this.inputEmail);
         this.userValidation = true;
         this.error = false
         this.$router.push('./home');
