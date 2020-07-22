@@ -1,8 +1,8 @@
 <template>
   <li class="post__item">
-    <router-link :to="`/post/${post.id}`">{{ post.title }}</router-link>
+    <router-link class="router__link" :to="`/post/${post.id}`">{{ post.title }}</router-link>
     <p>{{ post.body }}</p>
-    <router-link :to="`/user/${post.user.id}`">{{ post.user.name }}</router-link>
+    <router-link class="router__link" :to="`/user/${post.user.id}`">{{ post.user.name }}</router-link>
   </li>
 </template>
 
@@ -26,6 +26,11 @@ export default {
   padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+
+.router__link {
+  text-decoration: none;
+  font-weight: 700;
 }
 
 </style>

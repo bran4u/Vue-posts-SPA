@@ -27,7 +27,6 @@ export default {
   },
   state: {
     users: [],
-    loggedUser: '',
     userId: 1,
     userValidation: true,
   },
@@ -35,8 +34,8 @@ export default {
     getUsers(state) {
       return state.users;
     },
-    getInfo(state) {
-      return state.users.find(user => user.id === state.userId);
+    getLoggedId(state) {
+      return state.userId;
     },
     getUserValidation(state) {
       return state.userValidation;

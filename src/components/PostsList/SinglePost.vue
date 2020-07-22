@@ -1,7 +1,7 @@
 <template>
   <div class="singlePost">
     <div class="singlePost__item">
-      <h1 class="singlePost__title">{{ post.title }}</h1>
+      <h2 class="singlePost__title">{{ post.title }}</h2>
       <p class="singlePost__body">{{ post.body }}</p>
     </div>
         <CommentsLists 

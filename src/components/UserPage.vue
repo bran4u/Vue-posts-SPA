@@ -1,11 +1,14 @@
 <template>
-  <div class="user__page">
-    <h1>User information</h1>
-    <p>Name: {{ users.name }}</p>
-    <p>Username: {{users.username}}</p>
-    <p>Email: {{users.email}}</p>
-    <p>Phone {{users.phone}}</p>
+  <div>
+    <div class="user__page">
+      <h1>User information</h1>
+      <p>Name: {{ users.name }}</p>
+      <p>Username: {{users.username}}</p>
+      <p>Email: {{users.email}}</p>
+      <p>Phone {{users.phone}}</p>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -28,7 +31,7 @@ export default {
 
 <style scoped>
 .user__page {
-  max-height: 200px;
+  max-height: 300px;
   background-color: #fff;
   border-radius: 5px;
   padding: 30px;

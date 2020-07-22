@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import {} from 'vuex'
 import NavBar from './components/Navbar'
 export default {
   name: 'App',

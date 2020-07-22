@@ -20,15 +20,20 @@ export default {
       error: false,
     }
   },
+  computed: {
+    ...mapGetters(['getUsers', 'getUserValidation']),
+  },
   methods: {
     ...mapActions(['getUsersFromApi', 'getCommentsFromApi', 'getPostsFromApi']),
     ...mapMutations(['login', 'userCheck']),
-    ...mapGetters(['getUsers', 'getUserValidation']),
     login() {
-
       this.userCheck(this.inputEmail);
+      if (this.getUserValidation) {
+        this.error = false
         this.$router.push('./home');
-
+      } else {
+        this.error = true
+      }
     },
   },
   async mounted() {
