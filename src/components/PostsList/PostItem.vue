@@ -12,13 +12,6 @@ export default {
 }
 </script>
 
-
-<style>
-.post__item {
-  padding: 30px;
-} 
-</style>
-
 <style>
 .post__item {
   background-color: #fff;

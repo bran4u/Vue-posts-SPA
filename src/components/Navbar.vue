@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navbar">
     <ul class="navbar__list">
       <li class="navbar__item">
         <router-link class="navbar__link" to="/Vue-posts-SPA/home">Posts</router-link>
